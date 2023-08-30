@@ -9,7 +9,9 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -55,8 +57,9 @@
     "rxjs": "6.2.0",
     "rxjs-compat": "^6.0.0-rc.0",
     "swagger-ui-express": "^3.0.9",
-    "material-dashboard-react": "latest",
-    "zone.js": "0.8.26"
+    "material-dashboard-react": "1.6.0",
+    "zone.js": "0.8.26",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0-beta.1",
@@ -79,5 +82,6 @@
     "ts-node": "~6.1.0",
     "tslint": "~5.10.0",
     "typescript": ">=2.7.0 <2.8.0"
-  }
+  },
+  "snyk": true
 }
